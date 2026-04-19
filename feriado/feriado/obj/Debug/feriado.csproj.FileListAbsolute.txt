@@ -1,0 +1,7 @@
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\bin\Debug\feriado.exe.config
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\bin\Debug\feriado.exe
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\bin\Debug\feriado.pdb
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\obj\Debug\feriado.csproj.AssemblyReference.cache
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\obj\Debug\feriado.csproj.CoreCompileInputs.cache
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\obj\Debug\feriado.exe
+C:\Users\Andrépvp\Desktop\proj\feriado\feriado\feriado\obj\Debug\feriado.pdb
