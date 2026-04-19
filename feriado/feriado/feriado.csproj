@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcessoCarga.cs" /><Compile Include="Aerea.cs" /><Compile Include="Alerta.cs" /><Compile Include="CalculoFrete.cs" /><Compile Include="Carga.cs" /><Compile Include="CargaBase.cs" /><Compile Include="CargaExp.cs" /><Compile Include="CargaReal.cs" /><Compile Include="DecoradorCarga.cs" /><Compile Include="Facade.cs" /><Compile Include="Factory.cs" /><Compile Include="FreteExpresso.cs" /><Compile Include="FretePadrao.cs" /><Compile Include="GPSAdapter.cs" /><Compile Include="LogSistema.cs" /><Compile Include="Observador.cs" /><Compile Include="PainelControle.cs" /><Compile Include="Posicao.cs" /><Compile Include="Program.cs" />
+    <Compile Include="AcessoCarga.cs" /><Compile Include="Aerea.cs" /><Compile Include="Alerta.cs" /><Compile Include="CalculoFrete.cs" /><Compile Include="Carga.cs" /><Compile Include="CargaBase.cs" /><Compile Include="CargaExp.cs" /><Compile Include="CargaReal.cs" /><Compile Include="DecoradorCarga.cs" /><Compile Include="Facade.cs" /><Compile Include="Factory.cs" /><Compile Include="FreteExpresso.cs" /><Compile Include="FretePadrao.cs" /><Compile Include="GPSAdapter.cs" /><Compile Include="LogSistema.cs" /><Compile Include="Observador.cs" /><Compile Include="PainelControle.cs" /><Compile Include="Pedido.cs" /><Compile Include="Posicao.cs" /><Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" /><Compile Include="Proxy.cs" /><Compile Include="RastreamentoSatelital.cs" /><Compile Include="Rodoviaria.cs" /><Compile Include="SeguroCarga.cs" /><Compile Include="SensorTemperatura.cs" /><Compile Include="SistemaLegadoGPS.cs" /><Compile Include="Transportadora.cs" />
   </ItemGroup>
   <ItemGroup>

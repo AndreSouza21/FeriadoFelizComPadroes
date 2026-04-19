@@ -9,12 +9,13 @@ namespace feriado
     internal class Proxy : AcessoCarga
     {
         private string usuario;
-        private CargaReal real = new CargaReal();
+        private CargaReal real;
+        
 
-        public Proxy(string usuario)
+        public Proxy(string usuario, Pedido pedi)
         {
             this.usuario = usuario;
-           
+            real = new CargaReal(pedi.valorFrete, pedi.valorCarga, pedi.descricao);
         }
 
         public void MostrarCustos()

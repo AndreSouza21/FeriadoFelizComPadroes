@@ -13,14 +13,17 @@ namespace feriado
             var facade = new Facade();
             facade.Despachar("aerea", 100, new FreteExpresso());
 
-            Carga carga = new SeguroCarga(
+            facade.SetCarga(new SeguroCarga(
                                 new RastreamentoSatelital(
-                                    new CargaBase()));
-            
-            System.Console.WriteLine(carga.Descricao());
-            System.Console.WriteLine(carga.Custo());
+                                    new CargaBase())));
 
-            AcessoCarga acesso = new Proxy("ADMIN");
+
+            System.Console.WriteLine(facade.pedido.descricao);
+            System.Console.WriteLine("valor carga: " + facade.pedido.valorCarga);
+
+            
+
+            AcessoCarga acesso = new Proxy("ADMIN", facade.pedido);
             acesso.MostrarCustos();
         }
     }

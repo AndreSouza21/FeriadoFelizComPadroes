@@ -9,7 +9,7 @@ namespace feriado
     internal class CargaBase : Carga
     {
         public CargaBase() { }
-        public string Descricao() => "Carga básica";
+        public string Descricao() => "\nCarga básica";
         public double Custo() => 100;
     }
 }

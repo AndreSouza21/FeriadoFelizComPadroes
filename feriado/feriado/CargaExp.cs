@@ -9,7 +9,7 @@ namespace feriado
     internal class CargaExp : Carga
     {
         public CargaExp() { }
-        public string Descricao() => "Carga Expecial";
+        public string Descricao() => "\nCarga Expecial";
         public double Custo() => 400;
     }
 }
