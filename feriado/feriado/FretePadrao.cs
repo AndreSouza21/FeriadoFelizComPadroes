@@ -9,6 +9,6 @@ namespace feriado
     internal class FretePadrao : CalculoFrete
     {
         public FretePadrao() { }
-        public double Calcular(double peso) => peso * 1.35;
+        public double Calcular(double peso, double distancia) => peso * 1.35 + distancia*0.8;
     }
 }

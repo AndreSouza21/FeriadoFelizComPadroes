@@ -9,6 +9,6 @@ namespace feriado
     internal class FreteExpresso : CalculoFrete
     {
         public FreteExpresso() { }
-        public double Calcular(double peso) => peso * 2 + 50;
+        public double Calcular(double peso, double distancia) => peso * 2 + distancia*1.1 + 50;
     }
 }

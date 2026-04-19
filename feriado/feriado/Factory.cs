@@ -10,7 +10,7 @@ namespace feriado
     {
         public static Transportadora Criar(string tipo)
         {
-            switch (tipo)
+            switch (tipo.ToLower())
             {
                 case "rodoviaria":
                     return new Rodoviaria();

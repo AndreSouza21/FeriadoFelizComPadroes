@@ -8,6 +8,6 @@ namespace feriado
 {
     internal interface CalculoFrete
     {
-        double Calcular(double peso);
+        double Calcular(double peso, double distancia);
     }
 }

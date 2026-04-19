@@ -15,27 +15,37 @@ namespace feriado
         
         public Facade() { }
 
-        public void Despachar(string tipoTransportadora, double peso, CalculoFrete frete)
+        public void Despachar(string tipoTransportadora, double peso, CalculoFrete frete, double lat, double lon)
         {
+            //log inicial
             LogSistema.Instancia.Registrar("Iniciando despacho");
 
+            //parte da distancia
+            Posicao pos = new GPS(lat, lon);
+            Posicao ori = new GPSAdapter();
+
+            double distancia = new DistanciaService().CalcularDistancia(ori, pos);                       
+
+            //transporte
             var transportadora = Factory.Criar(tipoTransportadora);
 
-            UltimoFrete = frete.Calcular(peso);
+            UltimoFrete = frete.Calcular(peso, distancia);
 
             Console.WriteLine(transportadora.Entregar());
             Console.WriteLine($"Frete: {UltimoFrete}");
 
-            var sensor = new SensorTemperatura();
+            //observador
+            var sensor = SensorTemperatura.Instancia;
             sensor.AdicionarObservador(new PainelControle());
             sensor.AdicionarObservador(new Alerta());
 
+            //exemplificar o observador funcionando
             sensor.SetTemperatura(35);
             sensor.SetTemperatura(12);
             sensor.SetTemperatura(16);
 
-            criaPedido(UltimoFrete);
-
+            //finaliza o despache junto log de saida
+            criaPedido(UltimoFrete, distancia);
             LogSistema.Instancia.Registrar("Despacho finalizado");
 
         }
@@ -51,9 +61,9 @@ namespace feriado
             return this.carga;
         }
 
-        protected void criaPedido(double frete)
+        protected void criaPedido(double frete, double distancia)
         {
-            this.pedido = new Pedido(frete);
+            this.pedido = new Pedido(frete, distancia);
         }
 
         protected void atualizaPedido(string desc,  double valor)
