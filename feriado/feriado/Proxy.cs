@@ -9,12 +9,13 @@ namespace feriado
     internal class Proxy : AcessoCarga
     {
         private string usuario;
-        private CargaReal real = new CargaReal();
+        private CargaReal real;
+        
 
-        public Proxy(string usuario)
+        public Proxy(string usuario, Pedido pedi)
         {
             this.usuario = usuario;
-           
+            real = new CargaReal(pedi.valorFrete, pedi.valorCarga, pedi.descricao,pedi.distancia);
         }
 
         public void MostrarCustos()
@@ -22,7 +23,7 @@ namespace feriado
             if (usuario == "ADMIN")
                 real.MostrarCustos();
             else
-                Console.WriteLine("Acesso negado!");
+                Console.WriteLine("\nAcesso negado!");
         }
     }
 }

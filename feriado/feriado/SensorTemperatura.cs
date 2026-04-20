@@ -8,11 +8,20 @@ namespace feriado
 {
     internal class SensorTemperatura
     {
-        public SensorTemperatura() { }
-
+        private static SensorTemperatura instancia;
         private List<Observador> observadores = new List<Observador>();
         private double temperatura;
 
+        private SensorTemperatura() { }
+        public static SensorTemperatura Instancia
+        {
+            get
+            {
+                if (instancia == null)
+                    instancia = new SensorTemperatura();
+                return instancia;
+            }
+        }
         public void AdicionarObservador(Observador obs)
         {
             observadores.Add(obs);
